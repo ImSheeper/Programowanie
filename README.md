@@ -39,6 +39,6 @@ int main()
     }while(tn!='n');
 
     return 0;
-}```
+}c```
 
 Zadanie D
