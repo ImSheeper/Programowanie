@@ -1,4 +1,4 @@
-# Lista-4
+# Lista 4
 
 Zadanie C
 ```c
