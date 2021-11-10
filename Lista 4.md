@@ -153,3 +153,53 @@ int main()
     return 0;
 }
 ```
+# Zadanie E
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char tn;
+    do{
+        int n, m;
+
+        printf("Podaj n: \n");
+        scanf("%d", &n);
+
+        m = n/2;
+
+        if(m >= 1 && m <= 15) {
+            for(int i = 1; i <= m; i++) {
+                for (int j = 1; j <= i; j++) {
+                    printf("*");
+                }
+                printf("\n");
+            }
+
+            for(int i = 1; i <= m + 1; i++) {
+                if(n % 2 == 0) {
+                    for (int j = m; j >= i; j--) {
+                        printf("*");
+                    }
+                }
+                if(n % 2 == 1) {
+                    for (int j = m + 1; j >= i; j--) {
+                        printf("*");
+                    }
+                }
+                printf("\n");
+            }
+        }
+        else{
+            printf("Zla wartosc \n");
+        }
+
+        printf("\nPowtorzyc program? t/n \n");
+        scanf(" %c", &tn);
+
+    }while(tn!='n');
+
+    return 0;
+}
+```
