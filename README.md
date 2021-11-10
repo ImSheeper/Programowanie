@@ -1,7 +1,8 @@
 # Lista-4
 
 Zadanie C
-```#include <stdio.h>
+```c
+#include <stdio.h>
 #include <stdlib.h>
 
 int main()
