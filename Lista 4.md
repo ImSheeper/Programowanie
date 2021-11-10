@@ -7,7 +7,7 @@ Zadanie A
 
 int main()
 {
-           char tn;
+    char tn;
     do{
         int n;
 
