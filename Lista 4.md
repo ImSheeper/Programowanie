@@ -1,6 +1,6 @@
 # Lista 4
 
-Zadanie A
+# Zadanie A
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -36,7 +36,7 @@ int main()
 }
 ```
 
-Zadanie B
+# Zadanie B
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -71,7 +71,7 @@ int main()
 }
 ```
 
-Zadanie C
+# Zadanie C
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -112,4 +112,4 @@ int main()
     return 0;
 }
 ```
-Zadanie D
+# Zadanie D
