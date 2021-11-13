@@ -213,12 +213,10 @@ int main()
 {
     char tn;
     do{
-        int n, m, m2;
+        int n, m;
 
         printf("Podaj n: \n");
         scanf("%d", &n);
-
-        m2 = n/2;
 
         if(n % 2 == 0) {
             m = n/2;
@@ -229,7 +227,7 @@ int main()
         }
 
         if(n >= 1 && n <= 15) {
-            for(int i = 1; i <= m2; i++) {
+            for(int i = 1; i <= n / 2; i++) {
 
                 for(int j = m; j >= i; j--) {
                     printf(" ");
