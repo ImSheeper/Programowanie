@@ -205,7 +205,7 @@ int main()
 ```
 
 # Zadanie F
-```
+```c
 #include <stdio.h>
 #include <stdlib.h>
 
