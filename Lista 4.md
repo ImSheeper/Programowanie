@@ -218,19 +218,12 @@ int main()
         printf("Podaj n: \n");
         scanf("%d", &n);
 
-        if(n % 2 == 0) {
-            m = n/2;
-        }
-
-        else {
             m = (n/2) + 1;
-        }
 
         if(n >= 1 && n <= 15) {
             for(int i = 1; i <= n / 2; i++) {
 
                 for(int j = m; j >= i; j--) {
-                    printf(" ");
 
                     for(int g = 1; g <= i; g++) {
 
@@ -238,6 +231,7 @@ int main()
                             printf("*");
                         }
                     }
+                    printf(" ");
                 }
                 printf("\n");
             }
@@ -245,7 +239,6 @@ int main()
             for(int i = 1; i <= m; i++) {
 
                 for(int j = 1; j <= i; j++) {
-                    printf(" ");
 
                     for(int g = m; g >= i; g--) {
 
@@ -253,6 +246,7 @@ int main()
                             printf("*");
                         }
                     }
+                    printf(" ");
                 }
                 printf("\n");
             }
