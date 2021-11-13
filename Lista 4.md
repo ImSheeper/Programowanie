@@ -205,7 +205,7 @@ int main()
 ```
 
 # Zadanie F
-```c
+```
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -228,11 +228,14 @@ int main()
             m = (n/2) + 1;
         }
 
-        if(n >= 1 && n <= 15) {
+        if(m >= 1 && m <= 15) {
             for(int i = 1; i <= m2; i++) {
+                
                 for(int j = m; j >= i; j--) {
                     printf(" ");
+                    
                     for(int g = 1; g <= i; g++) {
+                        
                         if(j == i) {
                             printf("*");
                         }
@@ -242,16 +245,19 @@ int main()
             }
 
             for(int i = 1; i <= m; i++) {
+                
                 for(int j = 1; j <= i; j++) {
                     printf(" ");
+                    
                     for(int g = m; g >= i; g--) {
+                        
                         if (j == i) {
                             printf("*");
                         }
                     }
                 }
                 printf("\n");
-            }
+            }-
         }
 
         else {
