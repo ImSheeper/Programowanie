@@ -169,7 +169,7 @@ int main()
 
         m = n/2;
 
-        if(m >= 1 && m <= 15) {
+        if(n >= 1 && n <= 15) {
             for(int i = 1; i <= m; i++) {
                 for (int j = 1; j <= i; j++) {
                     printf("*");
