@@ -1,5 +1,4 @@
-
-#Zadanie 2
+# Zadanie 2
 ```c
 #include <stdio.h>
 
