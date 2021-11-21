@@ -69,3 +69,39 @@ int main() {
     return 0;
 }
 ```
+# Zadanie 5 (nie jestem pewny odnośnie imienia i nazwiska
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+typedef struct {
+    int id;
+    char *imie;
+    char *nazwisko;
+    int rok_u,mies_u,dzien_u;
+}tosoba;
+
+
+int main() {
+    srand(time(NULL));
+
+    tosoba a;
+
+    a.imie = "imie";
+    a.nazwisko = "naz";
+    a.rok_u = rand() % (1999 - 1900 + 1) + 1900;
+    a.mies_u = rand() % (12 - 1 + 1) + 1;
+    a.dzien_u = rand() % (31 - 1 + 1) + 1;
+    a.id = rand() % (99 - 1 + 1) + 1;
+
+    printf("Imie: %s %d \n", a.imie, rand() % 99);
+    printf("Nazwisko: %s %d \n", a.nazwisko, rand() % 99);
+    printf("Rok urodzenia: %d \n", a.rok_u);
+    printf("Miesiac urodzenia: %d \n", a.mies_u);
+    printf("Dzien urodzenia: %d \n", a.dzien_u);
+    printf("ID: %d \n", a.id);
+
+    return 0;
+}
+```
