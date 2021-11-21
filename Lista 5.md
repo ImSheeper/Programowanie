@@ -53,3 +53,19 @@ int main() {
     return 0;
 }
 ```
+# Zadanie 4 (generuje powtórzenia, może tablica, porównanie i potem break)
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void random() {
+    srand(time(NULL));
+    for(int i = 1; i <= 5; i++) printf("%d\n", rand() % (999 - 100 + 1) + 100);
+}
+
+int main() {
+    random();
+    return 0;
+}
+```
