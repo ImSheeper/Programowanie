@@ -91,7 +91,7 @@ int main() {
     return 0;
 }
 ```
-# Zadanie 5 (nie jestem pewny odnośnie imienia i nazwiska
+# Zadanie 5
 ```c
 #include <stdio.h>
 #include <stdlib.h>
