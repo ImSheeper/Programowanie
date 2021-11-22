@@ -1,3 +1,25 @@
+# Zadanie 1
+```c
+#include <stdio.h>
+
+int main() {
+    int a,b;
+
+    printf("Podaj a: \n");
+    scanf("%d", &a);
+    printf("Podaj b: \n");
+    scanf("%d", &b);
+
+    while(a != b) {
+        if(a > b) a = a-b;
+        else b = b-a;
+    }
+
+    printf("%d", a);
+
+    return 0;
+}
+```
 # Zadanie 2
 ```c
 #include <stdio.h>
