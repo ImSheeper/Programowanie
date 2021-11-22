@@ -108,6 +108,35 @@ int main() {
     return 0;
 }
 ```
+# Zadanie 4.2
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    srand(time(NULL));
+    int array[900];
+
+    for (int i = 0; i < 900; i++) {     // fill array
+        array[i] = i + 100;
+    }
+
+    for (int i = 0; i < 900; i++) {    // shuffle array
+        int temp = array[i];
+        int randomIndex = rand() % 900;
+
+        array[i] = array[randomIndex];
+        array[randomIndex] = temp;
+    }
+
+
+    for (int i = 0; i < 5; i++) {    // print array
+        printf("%d,",array[i]);
+    }
+    return 0;
+}
+```
 # Zadanie 5
 ```c
 #include <stdio.h>
