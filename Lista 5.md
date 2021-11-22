@@ -75,40 +75,7 @@ int main() {
     return 0;
 }
 ```
-# Zadanie 4 (Poddałem się, ten kod jest podjebany)
-```c
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
-void zapisanie(int *t) {
-    for(int i = 0 ; i < 900 ; i++) t[i] = i + 100;
-}
-
-void tasowanie(int *t) {
-    srand(time(NULL));
-
-    for(int i = 1; i <= 3000 ; i++) {
-        int a = rand()%900;
-        int b = rand()%900;
-
-        int temp = t[a];
-        t[a] = t[b];
-        t[b] = temp;
-    }
-}
-
-int main() {
-    int tablica[900];
-    zapisanie(tablica);
-    tasowanie(tablica);
-
-    for(int i = 0; i < 5 ; i++) printf("%d \n", tablica[i]);
-
-    return 0;
-}
-```
-# Zadanie 4.2
+# Zadanie 4
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -116,24 +83,24 @@ int main() {
 
 int main() {
     srand(time(NULL));
-    int array[900];
+    int tab[900];
 
-    for (int i = 0; i < 900; i++) {     // fill array
-        array[i] = i + 100;
+    for(int i = 0; i < 900; i++) {
+        tab[i] = i + 100;
     }
 
-    for (int i = 0; i < 900; i++) {    // shuffle array
-        int temp = array[i];
-        int randomIndex = rand() % 900;
+    for(int i = 0; i < 900; i++) {
+        int temp = tab[i];
+        int random = rand() % 900;
 
-        array[i] = array[randomIndex];
-        array[randomIndex] = temp;
+        tab[i] = tab[random];
+        tab[random] = temp;
     }
 
-
-    for (int i = 0; i < 5; i++) {    // print array
-        printf("%d,",array[i]);
+    for(int i = 0; i < 5; i++) {
+        printf("%d \n", tab[i]);
     }
+
     return 0;
 }
 ```
