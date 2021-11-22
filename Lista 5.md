@@ -75,19 +75,36 @@ int main() {
     return 0;
 }
 ```
-# Zadanie 4 (generuje powtórzenia, może tablica, porównanie i potem break)
+# Zadanie 4 (Poddałem się, ten kod jest podjebany)
 ```c
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
-void random() {
+void zapisanie(int *t) {
+    for(int i = 0 ; i < 900 ; i++) t[i] = i + 100;
+}
+
+void tasowanie(int *t) {
     srand(time(NULL));
-    for(int i = 1; i <= 5; i++) printf("%d\n", rand() % (999 - 100 + 1) + 100);
+
+    for(int i = 1; i <= 3000 ; i++) {
+        int a = rand()%900;
+        int b = rand()%900;
+
+        int temp = t[a];
+        t[a] = t[b];
+        t[b] = temp;
+    }
 }
 
 int main() {
-    random();
+    int tablica[900];
+    zapisanie(tablica);
+    tasowanie(tablica);
+
+    for(int i = 0; i < 5 ; i++) printf("%d \n", tablica[i]);
+
     return 0;
 }
 ```
