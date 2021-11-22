@@ -99,8 +99,8 @@ int main() {
 
 typedef struct {
     int id;
-    char *imie;
-    char *nazwisko;
+    char imie[20];
+    char nazwisko[20];
     int rok_u,mies_u,dzien_u;
 }tosoba;
 
@@ -110,15 +110,15 @@ int main() {
 
     tosoba a;
 
-    a.imie = "imie";
-    a.nazwisko = "naz";
+    sprintf(a.imie, "imie%d", rand() % 100);
+    sprintf(a.nazwisko, "naz%d", rand() % 100);
     a.rok_u = rand() % (1999 - 1900 + 1) + 1900;
     a.mies_u = rand() % (12 - 1 + 1) + 1;
     a.dzien_u = rand() % (31 - 1 + 1) + 1;
     a.id = rand() % (99 - 1 + 1) + 1;
 
-    printf("Imie: %s %d \n", a.imie, rand() % 99);
-    printf("Nazwisko: %s %d \n", a.nazwisko, rand() % 99);
+    printf("Imie: %s\n", a.imie);
+    printf("Nazwisko: %s \n", a.nazwisko);
     printf("Rok urodzenia: %d \n", a.rok_u);
     printf("Miesiac urodzenia: %d \n", a.mies_u);
     printf("Dzien urodzenia: %d \n", a.dzien_u);
