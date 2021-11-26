@@ -43,7 +43,7 @@ int main() {
         int tab[100];
         int a = 0;
         srand(time(NULL));
-        for (int i = 0; i < 99; i++) {
+        for (int i = 0; i < 100; i++) {
             tab[i] = rand() % 50;
             if (tab[i] <= 10) {
                 tab[i] = (rand() % 40) + 10;
