@@ -38,20 +38,25 @@ int main()
 #include <stdlib.h>
 
 int main() {
-    int tab[100];
-    int a = 0;
-    srand(time(NULL));
-    for(int i = 0; i < 99; i++) {
-        tab[i] = rand() % 50;
-        if(tab[i] < 10) {
-            tab[i] = rand() % (50 - 11 + 1) + 11;
-            tab[i] *= -1;
+    char tn;
+    do {
+        int tab[100];
+        int a = 0;
+        srand(time(NULL));
+        for (int i = 0; i < 99; i++) {
+            tab[i] = rand() % 50;
+            if (tab[i] <= 10) {
+                tab[i] = (rand() % 40) + 10;
+                tab[i] *= -1;
+            }
+            if (tab[i] % 2 == 0) a += tab[i];
+            printf("%d\n", tab[i]);
         }
-        if(tab[i] % 2 == 0) a += tab[i];
-        printf("%d\n", tab[i]);
-    }
-    printf("Suma liczb parzystych: %d", a);
-
+        printf("Suma liczb parzystych: %d\n", a);
+        printf("Wykonac program jeszcze raz? t/n\n");
+        scanf(" %c", &tn);
+    }while(tn != 'n');
     return 0;
 }
+
 ```
