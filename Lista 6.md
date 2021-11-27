@@ -60,3 +60,48 @@ int main() {
 }
 
 ```
+
+# Zadanie 4 (Robocze)
+```c
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+
+int swap(int a, int b) {
+    int temp;
+    temp = a;
+    a = b;
+    b = temp;
+}
+
+int main() {
+    char tn;
+    do {
+        int tab[100];
+        int swap, temp;
+        srand(time(NULL));
+
+        for(int i = 0; i < 100; i++) {
+            tab[i] = rand() % 200;
+
+            if(tab[i] > 100) {
+                tab[i] = rand() % 100;
+                tab[i] *= -1;
+            }
+            for(int j = 0; j < 100; j++) {
+                if(tab[i] > tab[i + 1]) {
+                    swap = tab[i];
+                    tab[i] = tab[i + 1];
+                    tab[i + 1] = temp;
+                }
+            }
+        }
+        printf("Posortowane liczby: \n");
+        for(int i = 0; i < 100; i++) printf("%d\n", tab[i]);
+
+        printf("Powtorzyc program? t/n \n");
+        scanf(" %c", &tn);
+    }while(tn != 'n');
+    return 0;
+}
+```
