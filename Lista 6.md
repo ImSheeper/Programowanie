@@ -66,7 +66,7 @@ int main() {
 }
 ```
 
-# Zadanie 4 (Robocze)
+# Zadanie 4
 ```c
 #include <stdio.h>
 #include <time.h>
