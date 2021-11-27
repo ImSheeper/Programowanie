@@ -72,39 +72,52 @@ int main() {
 #include <time.h>
 #include <stdlib.h>
 
-int swap(int a, int b) {
-    int temp;
-    temp = a;
-    a = b;
-    b = temp;
+void random(int *tab) {
+    srand(time(NULL));
+
+    printf("Nieposortowane liczby: \n");
+    for(int i = 0; i < 100; i++) {
+        tab[i] = rand() % 199;
+
+        if(tab[i] > 100) {
+            tab[i] = rand() % 100;
+            tab[i] *= -1;
+        }
+        if (i == 0) printf("%d", tab[i]);
+        else printf(", %d", tab[i]);
+    }
+}
+
+void bubble(int *tab) {
+    int swap;
+    for(int i = 0; i < 100; i++) {
+
+        for(int j = 0; j < 100; j++) {
+
+            if (tab[j] > tab[j + 1]) {
+                swap = tab[j];
+                tab[j] = tab[j + 1];
+                tab[j + 1] = swap;
+            }
+        }
+    }
 }
 
 int main() {
     char tn;
     do {
         int tab[100];
-        int swap, temp;
-        srand(time(NULL));
 
+        random(tab);
+        bubble(tab);
+
+        printf("\n\nPosortowane liczby: \n");
         for(int i = 0; i < 100; i++) {
-            tab[i] = rand() % 200;
-
-            if(tab[i] > 100) {
-                tab[i] = rand() % 100;
-                tab[i] *= -1;
-            }
-            for(int j = 0; j < 100; j++) {
-                if(tab[i] > tab[i + 1]) {
-                    swap = tab[i];
-                    tab[i] = tab[i + 1];
-                    tab[i + 1] = temp;
-                }
-            }
+            if (i == 0) printf("%d", tab[i]);
+            else printf(", %d", tab[i]);
         }
-        printf("Posortowane liczby: \n");
-        for(int i = 0; i < 100; i++) printf("%d\n", tab[i]);
 
-        printf("Powtorzyc program? t/n \n");
+        printf("\n\nPowtorzyc program? t/n \n");
         scanf(" %c", &tn);
     }while(tn != 'n');
     return 0;
