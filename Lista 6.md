@@ -47,7 +47,8 @@ int main() {
             tab[i] = rand() % 50;
 
             if(tab[i] <= 10) {
-                tab[i] = (rand() % 40) + 11;
+                tab[i] = (rand() % 40) + 10;
+                if(tab[i] == 10) tab[i] += 1;
                 tab[i] *= -1;
             }
             printf("%d\n", tab[i]);
@@ -58,6 +59,7 @@ int main() {
     }while(tn != 'n');
     return 0;
 }
+
 ```
 
 # Zadanie 4 (Robocze)
