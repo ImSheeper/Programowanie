@@ -37,29 +37,33 @@ int main()
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+
+void random(int *tab) {
+    for(int i = 0; i < 99; i++) {
+        tab[i] = rand() % 50;
+
+        if(tab[i] <= 10) {
+            tab[i] = (rand() % 40) + 10;
+            if(tab[i] == 10) tab[i] += 1;
+            tab[i] *= -1;
+        }
+        printf("%d\n", tab[i]);
+    }
+}
+
 int main() {
     char tn;
     do {
         int tab[100];
 
         srand(time(NULL));
-        for(int i = 0; i < 99; i++) {
-            tab[i] = rand() % 50;
-
-            if(tab[i] <= 10) {
-                tab[i] = (rand() % 40) + 10;
-                if(tab[i] == 10) tab[i] += 1;
-                tab[i] *= -1;
-            }
-            printf("%d\n", tab[i]);
-        }
+        random(tab);
 
         printf("Powtorzyc program? t/n \n");
         scanf(" %c", &tn);
     }while(tn != 'n');
     return 0;
 }
-
 ```
 
 # Zadanie 4 (Robocze)
