@@ -66,6 +66,53 @@ int main() {
 }
 ```
 
+# Zadanie 3
+```c
+#include <stdio.h>
+#include <string.h>
+
+typedef struct {
+    int id;
+    char imie[20];
+    char nazwisko[20];
+    int wiek;
+} tosoba;
+
+int main() {
+    char wzorzec[20];
+    tosoba tab[5];
+    tab[5].id = 0;
+
+    for(int i = 0; i < 5; i++) {
+        tab[i].id = i + 1;
+        printf("Podaj imie:");
+        scanf("%s", tab[i].imie);
+        printf("Podaj nazwisko:");
+        scanf("%s", tab[i].nazwisko);
+        printf("Podaj wiek:");
+        scanf("%d", &tab[i].wiek);
+        printf("\n");
+    }
+
+    printf("Podaj wzorzec: \n");
+    scanf("%s", wzorzec);
+
+    int compare;
+
+    for(int i = 0; i < 5; i++) {
+        compare = strcmp(wzorzec, tab[i].imie);
+        if(compare == 0) {
+            printf("\nId: %d, Imie: %s, Nazwisko: %s, Wiek: %d\n", tab[i].id, tab[i].imie, tab[i].nazwisko, tab[i].wiek);
+            break;
+        }
+    }
+
+    if(compare != 0) printf("Nie ma takiej wartosci w bazie danych\n");
+
+    return 0;
+}
+```
+
 # Zadanie 4
 ```c
 #include <stdio.h>
