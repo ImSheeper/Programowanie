@@ -129,7 +129,7 @@ void random(int *tab) {
 
     printf("Nieposortowane liczby: \n");
     for(int i = 0; i < 100; i++) {
-        tab[i] = rand() % 199;
+        tab[i] = rand() % 200;
 
         if(tab[i] > 100) {
             tab[i] = rand() % 100;
