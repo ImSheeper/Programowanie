@@ -39,7 +39,7 @@ int main()
 #include <stdlib.h>
 
 void random(int *tab) {
-    for(int i = 0; i < 99; i++) {
+    for(int i = 0; i < 100; i++) {
         tab[i] = rand() % 50;
 
         if(tab[i] <= 10) {
