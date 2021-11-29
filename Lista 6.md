@@ -83,7 +83,6 @@ int main() {
     do {
         char wzorzec[20];
         tosoba tab[5];
-        tab[5].id = 0;
 
         for (int i = 0; i < 5; i++) {
             tab[i].id = i + 1;
