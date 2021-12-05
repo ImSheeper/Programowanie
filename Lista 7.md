@@ -62,10 +62,8 @@ int main() {
 
     for(int i = 0; i < rozmiar; i++) {
         for(int j = 0; j < rozmiar; j++) {
-            tab[i][j] = rand() % 20 - 10;
-            if(tab[i][j] >= 0) printf(" %d ", tab[i][j]);
-            else if(tab[i][j] == -10) printf("%d", tab[i][j]);
-            else if(tab[i][j] < 0 || tab[i][j] == 10) printf("%d ", tab[i][j]);
+            tab[i][j] = rand() % 21 - 10;
+            printf("%4d", tab[i][j]);
         }
         printf("\n");
     }
@@ -74,8 +72,7 @@ int main() {
 
     for(int i = 0; i < rozmiar; i++) {
         for(int j = 0; j < rozmiar; j += rozmiar) {
-            j += i;
-            suma += tab[i][j];
+            suma += tab[i][j + i];
         }
     }
 
@@ -83,8 +80,7 @@ int main() {
 
     for(int i = 0; i < rozmiar; i++) {
         for(int j = rozmiar - 1; j > 0; j -= rozmiar) {
-            j -= i;
-            suma2 += tab[i][j];
+            suma2 += tab[i][j - i];
         }
     }
 
@@ -93,5 +89,4 @@ int main() {
 
     return 0;
 }
-
 ```
