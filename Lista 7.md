@@ -53,7 +53,7 @@ int main() {
     printf("Podaj rozmiar tablicy:\n");
     scanf("%d", &rozmiar);
 
-    while(rozmiar > 10) {
+    while(rozmiar > 10 || rozmiar <= 0) {
         printf("Zly rozmiar! Podaj jeszcze raz: \n");
         scanf("%d", &rozmiar);
     }
@@ -93,4 +93,5 @@ int main() {
 
     return 0;
 }
+
 ```
