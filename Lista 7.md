@@ -123,3 +123,27 @@ int main() {
     return 0;
 }
 ```
+# Zadanie 4
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main( )
+{
+    srand(time(NULL));
+    float tab[5][5];
+
+    for(int i = 0; i < 5; i++) {
+        for(int j = 0; j < i; j++) {
+            printf("  0.00");
+        }
+        for(int k = 4; k > i - 1; k--) {
+            tab[i][k] = rand() % 11;
+            printf("%6.2f", tab[i][k]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+```
