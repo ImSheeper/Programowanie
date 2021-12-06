@@ -1,3 +1,36 @@
+# Zadanie 1
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int tab[10][10];
+    int tab2[10][10];
+
+    srand(time(NULL));
+
+    printf("Pierwsza tablica: \n");
+    for(int i = 0; i < 10; i++) {
+        for(int j = 0; j < 10; j++) {
+            tab[i][j] = rand() % (9 + 9 + 1) - 9;
+            printf("%4d", tab[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("Tablica po transpozycji: \n");
+    for(int i = 0; i < 10; i++) {
+        for(int j = 0; j < 10; j++) {
+            tab2[i][j] = tab[j][i];
+            printf("%4d", tab2[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+```
+
 # Zadanie 2
 ```c
 #include <stdio.h>
