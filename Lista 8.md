@@ -1,3 +1,34 @@
+# Zadanie 2
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int sil(int x) {
+
+    int a = 1;
+
+    for(int i = 1; i <= x; i++) {
+        a *= i;
+    }
+
+    return a;
+}
+
+int main(){
+
+    int x, y;
+
+    printf("Podaj x\n");
+    scanf("%d", &x);
+
+    y = sil(x);
+    printf("%d\n", y);
+
+    return 0;
+}
+```
+
 # Zadanie 4
 
 ```c
