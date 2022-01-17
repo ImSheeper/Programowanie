@@ -84,26 +84,34 @@ int main(){
 #include <stdlib.h>
 #include <time.h>
 
-void random(int **tab, int n) {
+void random(int tab[10][10], int n) {
 
     srand(time(NULL));
 
     for(int i = 0; i < n; i++) {
+
         for(int j = 0; j < n; j++) {
             tab[i][j] = rand() % 21 - 10;
-            printf("%3d", tab[i][j]);
+            printf("%4d", tab[i][j]);
         }
+        printf("\n");
     }
 }
 
 int main() {
 
-    int n, **tab[10][10];
+    int n, tab[10][10];
 
     printf("Podaj n: \n");
     scanf("%d", &n);
 
-    random(**tab, n);
+    while(n <= 0 || n > 10) {
+        printf("Bledna wartosc!\n");
+        printf("Podaj n: \n");
+        scanf("%d", &n);
+    }
+
+    random(tab, n);
 
     return 0;
 }
