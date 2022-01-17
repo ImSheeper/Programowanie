@@ -78,7 +78,36 @@ int main(){
     return 0;
 }
 ```
+# Zadanie 3
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
+void random(int **tab, int n) {
+
+    srand(time(NULL));
+
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < n; j++) {
+            tab[i][j] = rand() % 21 - 10;
+            printf("%3d", tab[i][j]);
+        }
+    }
+}
+
+int main() {
+
+    int n, **tab[10][10];
+
+    printf("Podaj n: \n");
+    scanf("%d", &n);
+
+    random(**tab, n);
+
+    return 0;
+}
+```
 # Zadanie 4
 
 ```c
