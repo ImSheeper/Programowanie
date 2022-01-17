@@ -1,4 +1,4 @@
-# Zadanie 1
+# Zadanie 1 bąbelkowe niezoptymalizowane
 ```c
 #include <stdio.h>
 #include <stdlib.h>
