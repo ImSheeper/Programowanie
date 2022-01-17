@@ -78,7 +78,7 @@ int main(){
     return 0;
 }
 ```
-# Zadanie 3
+# Zadanie 3 coś nie działa
 ```c
 #include <stdio.h>
 #include <stdlib.h>
