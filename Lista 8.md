@@ -163,6 +163,8 @@ float sum(float n) {
         pot = i + 1;
 
         suma += (1.0/i) * pow(-1, pot);
+        if(i == 1) printf("%f", suma);
+        else printf(", %f", suma);
     }
 
     return suma;
@@ -177,7 +179,7 @@ int main() {
 
     x = sum(n);
 
-    printf("Suma: %f", x);
+    printf("\nSuma: %f", x);
 
     return 0;
 }
