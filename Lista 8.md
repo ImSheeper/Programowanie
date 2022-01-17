@@ -139,3 +139,38 @@ int main()
     return 0;
 }
 ```
+
+# Zadanie 5
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+float sum(float n) {
+
+    float pot = 1, suma = 0;
+
+    for(int i = 1; i <= n; i++) {
+
+        pot = i + 1;
+
+        suma += (1.0/i) * pow(-1, pot);
+    }
+
+    return suma;
+}
+
+int main() {
+
+    float n, x;
+
+    printf("Podaj n: \n");
+    scanf("%f", &n);
+
+    x = sum(n);
+
+    printf("Suma: %f", x);
+
+    return 0;
+}
+```
