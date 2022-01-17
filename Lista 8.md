@@ -1,3 +1,53 @@
+# Zadanie 1
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void sort(int *tab){
+
+    int swap, przesuniecie = 0;
+
+    srand(time(NULL));
+
+    for(int i = 0; i < 50; i++) {
+        tab[i] = rand() % (122 - 97 + 1) + 97;
+        printf("%2c ", tab[i]);
+    }
+
+    printf("\n\n");
+
+    for(int i = 0; i < 50; i++) {
+
+        for(int j = 0; j < 50; j++) {
+
+            if(tab[j] > tab[j + 1]) {
+                swap = tab[j];
+                tab[j] = tab[j + 1];
+                tab[j + 1] = swap;
+                przesuniecie++;
+            }
+        }
+    }
+
+    printf("Liczba przesuniec: %d\n", przesuniecie);
+}
+
+int main() {
+
+    int tab[50];
+
+    sort(tab);
+
+    printf("Posortowane elementy:\n");
+    for(int i = 0; i < 50; i++) {
+        printf("%2c ", tab[i]);
+    }
+
+    return 0;
+}
+```
+
 # Zadanie 2
 
 ```c
