@@ -46,7 +46,7 @@ int main()
     return 0;
 }
 ```
-# Zadanie 3 (To da się zrobić, jeżeli będziecie używać zmiennej min, przypisywać jej wartość i porównywać)
+# Zadanie 3 (To da się zrobić prościej, jeżeli będziecie używać zmiennej min, przypisywać jej wartość i porównywać)
 ```c
 #include <stdio.h>
 #include <stdlib.h>
