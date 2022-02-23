@@ -118,24 +118,27 @@ int main()
 int main()
 {
 
-char tn;
-do{
-    int n;
-    float suma;
+    char tn;
+    do{
+        int n;
+        float suma;
 
-    printf("Podaj n: \n");
-    scanf("%d", &n);
+        printf("Podaj n: \n");
+        scanf("%d", &n);
 
-    printf("Elementy: \n");
-    for(int i=1; i<=n; i++){
-        printf("1/%d ", i);
-        suma += (float)1/i;
-    }
-    printf("Suma wynosi: %f", suma);
+        printf("Elementy: \n");
 
-    printf("\nPowtorzyc program? t/n \n");
-    scanf(" %c", &tn);
-}while(tn != 'n');
+        for(int i = 1; i <= n; i++){
+            if(i == 1) printf("%d", i);
+            else printf(" + 1/%d", i);
+            suma += (float)1/i;
+        }
+
+        printf("\nSuma wynosi: %f", suma);
+
+        printf("\nPowtorzyc program? t/n \n");
+        scanf(" %c", &tn);
+    }while(tn != 'n');
 
     return 0;
 }
