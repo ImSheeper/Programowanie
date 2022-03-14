@@ -63,6 +63,8 @@ int main() {
     return 0;
 }
 ```
+
+# Zadanie 3
 ```c
 #include <stdio.h>
 #include <stdlib.h>
